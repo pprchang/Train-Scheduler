@@ -14,6 +14,15 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    
+    <!--Moment Js-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
     <title>Train Scheduler</title>
   </head>
 
@@ -46,7 +55,8 @@
                     <th scope="col">Minutes Away</th>
                   </tr>
                 </thead>
-                <tbody id="trainInfo"></tbody>
+                <tbody id="trainInfo">
+                </tbody>
               </table>
           </div>
         </div>
@@ -66,21 +76,21 @@
             <form>
                 <div class="form-group text-white font-weight-bold">
                   <label for="formGroupExampleInput">Train Name</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Train Name">
+                  <input type="text" class="form-control" id="trainName" placeholder="Train Name">
                 </div>
                 <div class="form-group text-white font-weight-bold">
                   <label for="formGroupExampleInput2">Destination</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Destination">
+                  <input type="text" class="form-control" id="destination" placeholder="Destination">
                 </div>
                 <div class="form-group text-white font-weight-bold">
                     <label for="formGroupExampleInput">First Train Time (HH:mm - military time)</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First Train Time">
+                    <input type="text" class="form-control" id="firstTrain" placeholder="First Train Time">
                   </div>
                   <div class="form-group text-white font-weight-bold">
                     <label for="formGroupExampleInput2">Frequency (min)</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Frequency (min)">
+                    <input type="text" class="form-control" id="frequency" placeholder="Frequency (min)">
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button id="submit" type="submit" class="btn btn-primary">Submit</button>
                   <br>
                   <br>
 
@@ -90,7 +100,7 @@
           </div>
         </div>
       </div>
-   
+
     
     
 </body>
