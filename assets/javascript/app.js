@@ -75,14 +75,14 @@ database.ref().on(
     var diffTime = moment().diff(moment(firstTimeConvert), 'minutes');
 
     //time apart
-    var tRemainder = diffTime % tFreq;
+    var tApart = diffTime % tFreq;
 
     //minute until next train arrive
-    var tMinutesTillTrain = tFreq - tRemainder;
+    var tMinutes = tFreq - tApart;
 
     //next arriving train
     var nextTrain = moment()
-      .add(tMinutesTillTrain, 'minutes')
+      .add(tMinutes, 'minutes')
       .format('hh:mm A');
 
     //append data into html
@@ -96,7 +96,7 @@ database.ref().on(
         '</td><td>' +
         nextTrain +
         '</td><td>' +
-        tMinutesTillTrain +
+        tMinutes +
         '</td></tr>'
     );
   },
