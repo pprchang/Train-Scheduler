@@ -11,20 +11,15 @@ This is a train schedule application that incorporates Firebase to host arrival 
 
 #### Layout and Styling: 
 - Bootstrap 4 (https://getbootstrap.com/)
-- CSS 3
 
 #### Javascript:
-1. Function to generate buttons for the pre-selected exotic cars
-2. On.click function to determine which button was selected 
-3. Ajax call to Giphy API 
-5. On.click function to generate a button for the searched exotic car
-6. Function to pause and play the gif images
-7. Add audio to enhance user experience
+1. Function to add train
 
 #### Firebase:
+1. Use to store and update train schedule informations such as train's name, destination, frequency, next arrival and minutes away
 
 #### Moment.js:
-
+1. Use to calculate time such as frquency, next arrival and minutes away
 
 ## *Contributing* 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.  Thank you for your corporation.
